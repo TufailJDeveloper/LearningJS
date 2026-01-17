@@ -37,16 +37,16 @@
 
 
 ///Function Declaration
-function calculateAge(birthYear){
+// function calculateAge(birthYear){
 
-     const calculatedAge = 2026 -birthYear;
+//      const calculatedAge = 2026 -birthYear;
 
-     return calculatedAge;
-}
+//      return calculatedAge;
+// }
 
 
 
- //Function Expression
+//  //Function Expression
 
      const calculatedAge2=function (birthYear){
 
@@ -55,9 +55,28 @@ function calculateAge(birthYear){
      return calculatedAge;
 }
 
+// console.log(calculatedAge2(2001))
+// cookieStore
 
 
 
-   const returnedAge = calculateAge(1997)
+//    const returnedAge = calculateAge(1997)
 
-    console.log(returnedAge)
+//     console.log(returnedAge)
+
+
+
+///Arrow Functions
+
+const calAge3 = birthyear => 2026 - birthyear;
+ 
+
+console.log(calAge3(2001));
+
+const retiresIN = (birthyear, name) => {
+    const age = 2026 - birthyear;
+    const retiresIn = `${name} retires in ${65 - age}`
+    return retiresIn;
+}
+
+console.log(retiresIN(2001, "tufail"))
