@@ -88,22 +88,79 @@
 
 ////Function calling another function
 
-  function cutFruits(fruit){
+//   function cutFruits(fruit){
 
-        return fruit * 3;
-  }
-
-
- function foods(apples, mangoes){
-
-    const applePieces=cutFruits(apples);
-    const mangoPieces=cutFruits(mangoes);
+//         return fruit * 3;
+//   }
 
 
-    const juice=`i got ${applePieces} pieces apples and ${mangoPieces} pieces mangoes`
+//  function foods(apples, mangoes){
 
-    return juice;
- }
+//     const applePieces=cutFruits(apples);
+//     const mangoPieces=cutFruits(mangoes);
 
 
- console.log(foods(2,5))
+//     mangoPieces
+//     const juice=`i got ${applePieces} pieces apples and ${mangoPieces} pieces mangoes`
+//     return juice;
+//  }
+
+
+//  console.log(foods(2,5))
+
+
+///Introduction to Arrays
+
+
+const f1="friend1";
+const f2="friend2";
+const f3="friend3";
+
+
+const friends=["friend1", "friend2","friend3"];
+
+console.log(friends)
+
+console.log(friends[0])
+
+console.log(friends[2])
+
+
+const fruits=["apple","mango","banana"]
+
+console.log(fruits)
+
+friends[2]="new friend"
+
+console.log(friends)
+
+
+// friends=["new2","new3"]
+
+
+
+const userName="batman";
+
+const userDetails=[userName,'Bengaluru',2025-1997,"scientist",friends];
+
+
+console.log(userDetails)
+
+
+
+const calcAge=function(birthYear){
+
+    return  2025-birthYear;
+}
+
+
+
+const years=[1990, 1991 ,1992, 1993, 1994, 1995]
+
+console.log(calcAge(years));
+
+
+// console.log(calcAge(years[0]));
+
+
+
