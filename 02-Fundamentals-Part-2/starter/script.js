@@ -153,14 +153,66 @@ const calcAge=function(birthYear){
     return  2025-birthYear;
 }
 
-
-
 const years=[1990, 1991 ,1992, 1993, 1994, 1995]
 
-console.log(calcAge(years));
+// console.log(calcAge(years));
+
+console.log(calcAge(years[years.length-1]));
 
 
-// console.log(calcAge(years[0]));
+
+
+///Basic Array Operation Methods
+
+
+const elements=["ele1","ele2", "ele3"]
+
+
+
+console.log("Original Array")
+
+console.log(elements)
+
+
+elements.push("ele4")
+
+console.log("Elements after push method")
+
+console.log(elements)
+
+
+elements.unshift("unshift ele")
+
+console.log("Elements after unshift method")
+
+console.log(elements)
+
+
+
+
+elements.pop()
+
+console.log("pop>>>>>",elements.unshift(4))
+
+console.log("Elements after pop method")
+
+console.log(elements)
+
+
+elements.shift()
+
+// console.log("Elements after shift method")
+
+console.log(elements.includes("ele3"))
+
+console.log(elements.indexOf("ele3"))
+
+
+
+
+
+
+
 
 
 
