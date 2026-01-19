@@ -245,8 +245,28 @@ console.log(totals)
 
 
 
+/// Introduction to Objects
 
-console.log(totals)
+
+const userArray=[
+    "john",
+    "cena",
+    2025-1995,
+    "wrestler",
+    ['Randy Ortan', 'Undertaker', 'Cane']
+
+]
+
+
+const  userObject={
+    firstName:"John",
+    lastName:"Cena",
+    dob:2025-1995,
+    job:"wrestler",
+    friends:  ['Randy Ortan', 'Undertaker', 'Cane']
+
+}
+
 
 
 
