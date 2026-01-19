@@ -112,136 +112,136 @@
 ///Introduction to Arrays
 
 
-const f1="friend1";
-const f2="friend2";
-const f3="friend3";
+// const f1="friend1";
+// const f2="friend2";
+// const f3="friend3";
 
 
-const friends=["friend1", "friend2","friend3"];
+// const friends=["friend1", "friend2","friend3"];
 
-console.log(friends)
+// console.log(friends)
 
-console.log(friends[0])
+// console.log(friends[0])
 
-console.log(friends[2])
-
-
-const fruits=["apple","mango","banana"]
-
-console.log(fruits)
-
-friends[2]="new friend"
-
-console.log(friends)
+// console.log(friends[2])
 
 
-// friends=["new2","new3"]
+// const fruits=["apple","mango","banana"]
+
+// console.log(fruits)
+
+// friends[2]="new friend"
+
+// console.log(friends)
 
 
-
-const userName="batman";
-
-const userDetails=[userName,'Bengaluru',2025-1997,"scientist",friends];
-
-
-console.log(userDetails)
+// // friends=["new2","new3"]
 
 
 
-const calcAge=function(birthYear){
+// const userName="batman";
 
-    return  2025-birthYear;
-}
+// const userDetails=[userName,'Bengaluru',2025-1997,"scientist",friends];
 
-const years=[1990, 1991 ,1992, 1993, 1994, 1995]
 
-// console.log(calcAge(years));
-
-console.log(calcAge(years[years.length-1]));
+// console.log(userDetails)
 
 
 
+// const calcAge=function(birthYear){
 
-///Basic Array Operation Methods
+//     return  2025-birthYear;
+// }
 
+// const years=[1990, 1991 ,1992, 1993, 1994, 1995]
 
-const elements=["ele1","ele2", "ele3"]
+// // console.log(calcAge(years));
 
-
-
-console.log("Original Array")
-
-console.log(elements)
-
-
-elements.push("ele4")
-
-console.log("Elements after push method")
-
-console.log(elements)
-
-
-elements.unshift("unshift ele")
-
-console.log("Elements after unshift method")
-
-console.log(elements)
+// console.log(calcAge(years[years.length-1]));
 
 
 
 
-elements.pop()
-
-console.log("pop>>>>>",elements.unshift(4))
-
-console.log("Elements after pop method")
-
-console.log(elements)
+// ///Basic Array Operation Methods
 
 
-elements.shift()
-
-// console.log("Elements after shift method")
-
-console.log(elements.includes("ele3"))
-
-console.log(elements.indexOf("ele3"))
+// const elements=["ele1","ele2", "ele3"]
 
 
 
+// console.log("Original Array")
 
-/// CHALLENGE 2 on Arrays: 
+// console.log(elements)
+
+
+// elements.push("ele4")
+
+// console.log("Elements after push method")
+
+// console.log(elements)
+
+
+// elements.unshift("unshift ele")
+
+// console.log("Elements after unshift method")
+
+// console.log(elements)
 
 
 
-const calcTip = (billValue)=> billValue>=50 && billValue<=300 ? 0.15 * billValue : 0.20 * billValue;
+
+// elements.pop()
+
+// console.log("pop>>>>>",elements.unshift(4))
+
+// console.log("Elements after pop method")
+
+// console.log(elements)
+
+
+// elements.shift()
+
+// // console.log("Elements after shift method")
+
+// console.log(elements.includes("ele3"))
+
+// console.log(elements.indexOf("ele3"))
+
+
+
+
+// /// CHALLENGE 2 on Arrays: 
+
+
+
+// const calcTip = (billValue)=> billValue>=50 && billValue<=300 ? 0.15 * billValue : 0.20 * billValue;
     
-    //  return billValue>=50 && billValue<=300 ? 0.15 * billValue : 0.20 * billValue;
+//     //  return billValue>=50 && billValue<=300 ? 0.15 * billValue : 0.20 * billValue;
     
-    // if(billValue>50 && billValue<300){
+//     // if(billValue>50 && billValue<300){
         
-    //     return 0.15 * billValue;
-    // }
+//     //     return 0.15 * billValue;
+//     // }
     
-    // else{
+//     // else{
         
-    //     return 0.20 * billValue;
-    // }
+//     //     return 0.20 * billValue;
+//     // }
 
-const result = calcTip(100)
+// const result = calcTip(100)
 
-console.log(result)
+// console.log(result)
 
-const bills=[125, 555, 44];
+// const bills=[125, 555, 44];
 
-const tips=[calcTip(bills[0]),  calcTip(bills[1]) , calcTip(bills[2])] ;
+// const tips=[calcTip(bills[0]),  calcTip(bills[1]) , calcTip(bills[2])] ;
 
-console.log(tips)
+// console.log(tips)
 
 
-const totals= [bills[0]+tips[0],   bills[1]+tips[1] , bills[2]+tips[2]];
+// const totals= [bills[0]+tips[0],   bills[1]+tips[1] , bills[2]+tips[2]];
 
-console.log(totals)
+// console.log(totals)
 
 
 
@@ -261,11 +261,61 @@ const userArray=[
 const  userObject={
     firstName:"John",
     lastName:"Cena",
-    dob:2025-1995,
+    age:2025-1995,
     job:"wrestler",
     friends:  ['Randy Ortan', 'Undertaker', 'Cane']
 
 }
+
+console.log(userObject)
+
+
+
+
+
+///Dot vs Bracket Notation
+
+console.log(userObject.firstName)
+
+console.log(userObject['firstName'])
+
+
+const  nameKey='Name'
+
+console.log(userObject['first' + nameKey])
+
+
+const interestedIn=prompt('what do you want to know about the user: firstName, lastName, age, job, friends')
+
+
+
+if(userObject[interestedIn]){
+    
+    console.log(userObject[interestedIn])
+}
+
+else{
+    console.log("Wrong input, Choose Between firstName, lastName, age, job, friends")
+}
+
+userObject.location="Bengaluru"
+
+userObject['twitter']="user@twitter.com"
+
+console.log(userObject)
+
+
+
+///John has 3 friends , and his best friend is called Randy Ortan.
+
+console.log(`${userObject.firstName} has ${userObject.friends.length} friends , and his best friends is called ${userObject.friends[0]}`)
+
+
+
+
+
+
+
 
 
 
