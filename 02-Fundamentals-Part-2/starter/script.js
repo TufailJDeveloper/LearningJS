@@ -248,26 +248,26 @@
 /// Introduction to Objects
 
 
-const userArray=[
-    "john",
-    "cena",
-    2025-1995,
-    "wrestler",
-    ['Randy Ortan', 'Undertaker', 'Cane']
+// const userArray=[
+//     "john",
+//     "cena",
+//     2025-1995,
+//     "wrestler",
+//     ['Randy Ortan', 'Undertaker', 'Cane']
 
-]
+// ]
 
 
-const  userObject={
-    firstName:"John",
-    lastName:"Cena",
-    age:2025-1995,
-    job:"wrestler",
-    friends:  ['Randy Ortan', 'Undertaker', 'Cane']
+// const  userObject={
+//     firstName:"John",
+//     lastName:"Cena",
+//     age:2025-1995,
+//     job:"wrestler",
+//     friends:  ['Randy Ortan', 'Undertaker', 'Cane']
 
-}
+// }
 
-console.log(userObject)
+// console.log(userObject)
 
 
 
@@ -275,40 +275,95 @@ console.log(userObject)
 
 ///Dot vs Bracket Notation
 
-console.log(userObject.firstName)
+// console.log(userObject.firstName)
 
-console.log(userObject['firstName'])
-
-
-const  nameKey='Name'
-
-console.log(userObject['first' + nameKey])
+// console.log(userObject['firstName'])
 
 
-const interestedIn=prompt('what do you want to know about the user: firstName, lastName, age, job, friends')
+// const  nameKey='Name'
+
+// console.log(userObject['first' + nameKey])
+
+
+// const interestedIn=prompt('what do you want to know about the user: firstName, lastName, age, job, friends')
 
 
 
-if(userObject[interestedIn]){
+// if(userObject[interestedIn]){
     
-    console.log(userObject[interestedIn])
+//     console.log(userObject[interestedIn])
+// }
+
+// else{
+//     console.log("Wrong input, Choose Between firstName, lastName, age, job, friends")
+// }
+
+// userObject.location="Bengaluru"
+
+// userObject['twitter']="user@twitter.com"
+
+// console.log(userObject)
+
+
+
+// ///John has 3 friends , and his best friend is called Randy Ortan.
+
+// console.log(`${userObject.firstName} has ${userObject.friends.length} friends , and his best friends is called ${userObject.friends[0]}`)
+
+
+
+
+
+///Object methods
+
+const  userObject={
+    firstName:"John",
+    lastName:"Cena",
+    birthYear:1997,
+    job:"wrestler",
+    friends:  ['Randy Ortan', 'Undertaker', 'Cane'],
+    hasDrivinglicence:true,
+
+
+    // calcAge : function(birthYear){
+
+    //     return 2025-birthYear;
+
+    // }
+
+   
+    // calcAge : function(){
+
+    //     return 2025-this.birthYear;
+
+    // }
+
+
+    calcAge : function(){
+        this.age = 2025-this.birthYear;
+
+        return this.age;
+    },
+
+
+    getSummary : function(){
+
+        console.log(`${this.firstName} is a ${this.calcAge()} old ${this.job} and he has  ${this.hasDrivinglicence?"a":"no"} drivers licence`)
+    }
+
 }
 
-else{
-    console.log("Wrong input, Choose Between firstName, lastName, age, job, friends")
-}
+console.log(userObject.calcAge())
 
-userObject.location="Bengaluru"
+console.log(userObject.age)
 
-userObject['twitter']="user@twitter.com"
-
-console.log(userObject)
+console.log(userObject.getSummary())
 
 
 
-///John has 3 friends , and his best friend is called Randy Ortan.
 
-console.log(`${userObject.firstName} has ${userObject.friends.length} friends , and his best friends is called ${userObject.friends[0]}`)
+
+
 
 
 
