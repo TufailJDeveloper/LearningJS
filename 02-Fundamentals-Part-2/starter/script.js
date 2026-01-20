@@ -316,13 +316,13 @@
 
 ///Object methods
 
-const  userObject={
-    firstName:"John",
-    lastName:"Cena",
-    birthYear:1997,
-    job:"wrestler",
-    friends:  ['Randy Ortan', 'Undertaker', 'Cane'],
-    hasDrivinglicence:true,
+// const  userObject={
+//     firstName:"John",
+//     lastName:"Cena",
+//     birthYear:1997,
+//     job:"wrestler",
+//     friends:  ['Randy Ortan', 'Undertaker', 'Cane'],
+//     hasDrivinglicence:true,
 
 
     // calcAge : function(birthYear){
@@ -339,71 +339,114 @@ const  userObject={
     // }
 
 
-    calcAge : function(){
-        this.age = 2025-this.birthYear;
+//     calcAge : function(){
+//         this.age = 2025-this.birthYear;
 
-        return this.age;
-    },
-
-
-    getSummary : function(){
-
-        console.log(`${this.firstName} is a ${this.calcAge()} old ${this.job} and he has  ${this.hasDrivinglicence?"a":"no"} drivers licence`)
-    }
-
-}
-
-console.log(userObject.calcAge())
-
-console.log(userObject.age)
-
-console.log(userObject.getSummary())
+//         return this.age;
+//     },
 
 
+//     getSummary : function(){
+
+//         console.log(`${this.firstName} is a ${this.calcAge()} old ${this.job} and he has  ${this.hasDrivinglicence?"a":"no"} drivers licence`)
+//     }
+
+// }
+
+// console.log(userObject.calcAge())
+
+// console.log(userObject.age)
+
+// console.log(userObject.getSummary())
 
 
-///CHALLENGE 3:
 
-const mark={
+
+// ///CHALLENGE 3:
+
+// const mark={
     
-    fullName :'Mark Miller',
-    mass : 78,
-    height: 1.69,
+//     fullName :'Mark Miller',
+//     mass : 78,
+//     height: 1.69,
     
-    calcBMI :function(){
-        this.bmi= this.mass / (this.height * this.height)
-        return this.bmi;
-    }
-}
+//     calcBMI :function(){
+//         this.bmi= this.mass / (this.height ** 2)
+//         return this.bmi;
+//     }
+// }
 
-const john={
+// const john={
     
-    fullName :'John Smith',
-    mass : 92,
-    height: 1.95,
+//     fullName :'John Smith',
+//     mass : 92,
+//     height: 1.95,
     
-    calcBMI :function(){
-        this.bmi= this.mass / (this.height * this.height)
-        return this.bmi;
-    }
-}
+//     calcBMI :function(){
+//         this.bmi= this.mass / (this.height ** 2)
+//         return this.bmi;
+//     }
+// }
 
-console.log(mark.calcBMI())
+// mark.calcBMI()
 
-console.log(john.calcBMI())
+// john.calcBMI()
 
-if(mark.calcBMI() > john.calcBMI()){
+// console.log(mark.bmi , john.bmi)
+
+
+// if(mark.calcBMI() > john.calcBMI()){
     
-    console.log(`${mark.fullName} BMI (${mark.calcBMI()}) is higher than ${ john.fullName }(${john.calcBMI()})!`)
-}
+//     console.log(`${mark.fullName} BMI (${mark.calcBMI()}) is higher than ${ john.fullName }(${john.calcBMI()})!`)
+// }
  
-   else if(john.calcBMI() > mark.calcBMI()){
+//    else if(john.calcBMI() > mark.calcBMI()){
     
-    console.log(`${john.fullName} BMI (${john.calcBMI()}) is higher than ${ mark.fullName }(${mark.calcBMI()})!`)
-}
+//     console.log(`${john.fullName} BMI (${john.calcBMI()}) is higher than ${ mark.fullName }(${mark.calcBMI()})!`)
+// }
     
 
+
+
+///Iteation : The For Loop
   
+
+
+// console.log('Lifting Weights Repitition 1')
+// console.log('Lifting Weights Repitition 2')
+// console.log('Lifting Weights Repitition 3')
+// console.log('Lifting Weights Repitition 4')
+// console.log('Lifting Weights Repitition 5')
+// console.log('Lifting Weights Repitition 6')
+// console.log('Lifting Weights Repitition 7')
+// console.log('Lifting Weights Repitition 8')
+// console.log('Lifting Weights Repitition 9')
+// console.log('Lifting Weights Repitition 10')
+
+
+
+
+for( let rep =1 ; rep<=10 ;rep++){
+    console.log(`Lifting Weights Repitition ${rep}`)
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
