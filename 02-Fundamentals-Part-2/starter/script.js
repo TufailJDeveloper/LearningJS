@@ -424,16 +424,82 @@
 // console.log('Lifting Weights Repitition 10')
 
 
+// for( let rep =1 ; rep<=10 ;rep++){
+//     console.log(`Lifting Weights Repitition ${rep}`)
+// }
 
 
-for( let rep =1 ; rep<=10 ;rep++){
-    console.log(`Lifting Weights Repitition ${rep}`)
+
+
+
+///Looping Arrays, Breaking and Continuing
+
+
+const userArray=[
+    "john",
+    "cena",
+    2025-1995,
+    "wrestler",
+    ['Randy Ortan', 'Undertaker', 'Cane']
+
+
+]
+
+
+const typeArray=[]
+
+for(let i=0 ; i<userArray.length; i++){
+
+//Reading for User Array Object
+    console.log(userArray[i])
+
+
+// //Filling Type array
+//     typeArray[i] =typeof(userArray[i])
+
+
+//Another Way
+ 
+typeArray.push(typeof userArray[i])
+
+}
+
+console.log(typeArray)
+
+
+const years= [1991, 1995, 1996, 1997]
+
+const age=[]
+
+for(let i=0 ; i<years.length ; i++){
+
+     age.push(2025- years[i]);
+}
+
+console.log(age)
+
+
+
+///CONTINUE AND BREAK
+
+console.log('-- ONLY STRINGS --')
+
+for(let i=0 ; i<userArray.length; i++){
+
+   if(typeof userArray[i] !== 'string') continue;
+    console.log(userArray[i] ,typeof userArray[i])
+
 }
 
 
+console.log('-- BREAK  WITH NUMBER --')
 
+for(let i=0 ; i<userArray.length; i++){
 
+   if(typeof userArray[i] !== 'number') continue;
+    console.log(userArray[i] ,typeof userArray[i])
 
+}
 
 
 
