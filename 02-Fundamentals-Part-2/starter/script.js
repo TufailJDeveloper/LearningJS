@@ -506,35 +506,61 @@
 
 ///LOOPING BACKWARDS AND LOOPS IN LOOPS
 
-const userArray=[
-    "john",
-    "cena",
-    2025-1995,
-    "wrestler",
-    ['Randy Ortan', 'Undertaker', 'Cane']
+// const userArray=[
+//     "john",
+//     "cena",
+//     2025-1995,
+//     "wrestler",
+//     ['Randy Ortan', 'Undertaker', 'Cane']
 
 
-]
+// ]
 
 
-for(let i=userArray.length-1; i>=0 ;i--){
-    console.log(i , userArray[i])
+// for(let i=userArray.length-1; i>=0 ;i--){
+//     console.log(i , userArray[i])
+// }
+
+
+
+// ///LOOP INSIDE LOOP
+
+// for(let exercise=1 ; exercise<4 ; exercise++){
+//     console.log(`Starting Exercise ${exercise}`)
+
+//     for(let rep=1 ;rep<=10 ;rep++){
+//         console.log(`Rep${rep}`)
+//     }
+// }
+
+
+
+
+///THE WHILE LOOP
+
+
+ let rep=1;
+
+ while(rep<=10){
+    console.log(`Lifting Weights Repitition ${rep}`)
+    rep++;
+ }
+
+
+let dice=Math.trunc(Math.random() * 6)+1
+
+console.log(dice)
+
+
+
+while(dice !== 6){
+    console.log(dice)
+     dice=Math.trunc(Math.random() *6)+1
+
+     if(dice==6){
+        console.log(`found ${dice}`)
+     }
 }
-
-
-
-///LOOP INSIDE LOOP
-
-for(let exercise=1 ; exercise<4 ; exercise++){
-    console.log(`Starting Exercise ${exercise}`)
-
-    for(let rep=1 ;rep<=10 ;rep++){
-        console.log(`Rep${rep}`)
-    }
-}
-
-
-
 
 
 
