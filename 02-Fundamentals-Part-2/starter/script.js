@@ -539,28 +539,111 @@
 ///THE WHILE LOOP
 
 
- let rep=1;
+//  let rep=1;
 
- while(rep<=10){
-    console.log(`Lifting Weights Repitition ${rep}`)
-    rep++;
- }
-
-
-let dice=Math.trunc(Math.random() * 6)+1
-
-console.log(dice)
+//  while(rep<=10){
+//     console.log(`Lifting Weights Repitition ${rep}`)
+//     rep++;
+//  }
 
 
+// let dice=Math.trunc(Math.random() * 6)+1
 
-while(dice !== 6){
-    console.log(dice)
-     dice=Math.trunc(Math.random() *6)+1
+// console.log(dice)
 
-     if(dice==6){
-        console.log(`found ${dice}`)
-     }
+
+
+// while(dice !== 6){
+//     console.log(dice)
+//      dice=Math.trunc(Math.random() *6)+1
+
+//      if(dice==6){
+//         console.log(`found ${dice}`)
+//      }
+// }
+
+
+
+
+///CHALLENGE 4
+
+
+const bills =[ 22, 295, 176, 440, 37, 105, 10, 1100, 86, 52]
+
+const tips=[]
+
+const totals=[]
+
+
+const calcTip = function(billValue){
+    
+      return billValue>=50 && billValue<=300 ? 0.15 * billValue : 0.20 * billValue;
+     
 }
+
+     for(let i=0 ; i<bills.length; i++){
+               
+                 const tip = calcTip(bills[i]);
+
+                 tips.push(tip)
+                 
+                 totals[i] =tip +bills[i]
+     }
+     
+    
+  console.log(bills, tips, totals)
+
+
+const calcAverage = function(arr){
+    
+    let sum=0;
+
+
+    for(let i=0 ; i<arr.length;i++){
+        
+        sum+=arr[i]
+        
+    }
+        return sum/arr.length;
+        
+}
+
+  console.log(calcAverage(totals))
+  console.log(calcAverage(tips))
+
+
+
+
+
+      
+     
+
+
+
+
+
+     
+     
+     
+     
+    
+
+
+
+  
+     
+     
+     
+     
+     
+    
+
+
+
+
+
+
+
 
 
 
