@@ -138,31 +138,98 @@ TEST DATA: [7.5, 8, 6.5, 0, 8.5, 4, 0]
 
 
 
+// const calculatedData = function (arr) {
+//   let totalHoursWorked = 0;
+//   let mostWorkingHourDay = arr[0];
+//   let mostWorkingDayIndex = 0;
+
+//   for (let i = 0; i < arr.length; i++) {
+//     totalHoursWorked += arr[i];
+
+//     if (arr[i] > mostWorkingHourDay) {
+//       mostWorkingHourDay = arr[i];
+//       mostWorkingDayIndex = i;
+//     }
+
+    
+//   }
+
+//   let averageDailyHours = totalHoursWorked / arr.length;
+
+//   console.log("Total hours:", totalHoursWorked);
+//   console.log("Average daily hours:", averageDailyHours);
+//   console.log("Day with most hours:", mostWorkingDayIndex);
+//   console.log(totalHoursWorked>=35? "FullWeek" :"No Full week")
+// };
+
+// const arr = [7.5, 8, 6.5, 0, 8.5, 4, 0];
+// calculatedData(arr);
+
+
+
+
+
+
+///Time Tracking Updated Challenge
+
 const calculatedData = function (arr) {
   let totalHoursWorked = 0;
-  let mostWorkingHourDay = arr[0];
+  let mostWorkingHour = arr[0];
   let mostWorkingDayIndex = 0;
+  let numberOfDaysWorked = 0;
 
   for (let i = 0; i < arr.length; i++) {
     totalHoursWorked += arr[i];
 
-    if (arr[i] > mostWorkingHourDay) {
-      mostWorkingHourDay = arr[i];
+    if (arr[i] > 0) numberOfDaysWorked++;
+
+    if (arr[i] > mostWorkingHour) {
+      mostWorkingHour = arr[i];
       mostWorkingDayIndex = i;
     }
-    
   }
 
-  let averageDailyHours = totalHoursWorked / arr.length;
+  const averageDailyHours = totalHoursWorked / arr.length;
+  const isFullTime = totalHoursWorked >= 35;
 
-  console.log("Total hours:", totalHoursWorked);
-  console.log("Average daily hours:", averageDailyHours);
-  console.log("Day with most hours:", mostWorkingDayIndex);
-  console.log(totalHoursWorked>=35? "FullWeek" :"No Full week")
+  let mostWorkingDay;
+
+  switch (mostWorkingDayIndex) {
+    case 0:
+      mostWorkingDay = "Monday";
+      break;
+    case 1:
+      mostWorkingDay = "Tuesday";
+      break;
+    case 2:
+      mostWorkingDay = "Wednesday";
+      break;
+    case 3:
+      mostWorkingDay = "Thursday";
+      break;
+    case 4:
+      mostWorkingDay = "Friday";
+      break;
+    case 5:
+      mostWorkingDay = "Saturday";
+      break;
+    case 6:
+      mostWorkingDay = "Sunday";
+      break;
+    default:
+      mostWorkingDay = "Invalid day";
+  }
+
+  console.log("Total hours worked:", totalHoursWorked);
+  console.log("Average daily hours:", averageDailyHours.toFixed(2));
+  console.log("Day with most hours:", mostWorkingDay);
+  console.log("Days worked:", numberOfDaysWorked);
+  console.log("Full-time week:", isFullTime ? "Yes" : "No");
 };
 
 const arr = [7.5, 8, 6.5, 0, 8.5, 4, 0];
 calculatedData(arr);
+
 
 
 
