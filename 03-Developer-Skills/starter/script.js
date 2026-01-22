@@ -106,26 +106,63 @@ TEST DATA 1: [17, 21, 23]
 TEST DATA 2: [12, 5, -5, 0, 4]
 */
 
-const printForecast= function(arr){
+// const printForecast= function(arr){
 
 
-    let str='';
-    for(let i=0 ; i<arr.length; i++){
-        str +=  `...${arr[i]}°C in ${i+1} days `;
+//     let str='';
+//     for(let i=0 ; i<arr.length; i++){
+//         str +=  `...${arr[i]}°C in ${i+1} days `;
+//     }
+
+//     console.log('...' + str)
+// }
+
+// const arr=[17, 21, 23]
+// // const arr=[12, 5, -5, 0, 4]
+
+// printForecast(arr)
+
+
+
+/*
+Build a time tracking application for freelancers. At some point in building this app, you need a function 
+that receives daily work hours for a certain week, and returns:
+1. Total hours worked
+2. Average daily hours
+3. The day with the most hours worked
+4. Number of days worked
+5. Whether the week was full-time (worked 35 hours or more)
+
+TEST DATA: [7.5, 8, 6.5, 0, 8.5, 4, 0]
+*/
+
+
+
+const calculatedData = function (arr) {
+  let totalHoursWorked = 0;
+  let mostWorkingHourDay = arr[0];
+  let mostWorkingDayIndex = 0;
+
+  for (let i = 0; i < arr.length; i++) {
+    totalHoursWorked += arr[i];
+
+    if (arr[i] > mostWorkingHourDay) {
+      mostWorkingHourDay = arr[i];
+      mostWorkingDayIndex = i;
     }
+    
+  }
 
-    console.log('...' + str)
-}
+  let averageDailyHours = totalHoursWorked / arr.length;
 
-const arr=[17, 21, 23]
-// const arr=[12, 5, -5, 0, 4]
+  console.log("Total hours:", totalHoursWorked);
+  console.log("Average daily hours:", averageDailyHours);
+  console.log("Day with most hours:", mostWorkingDayIndex);
+  console.log(totalHoursWorked>=35? "FullWeek" :"No Full week")
+};
 
-printForecast(arr)
-
-
-
-
-
+const arr = [7.5, 8, 6.5, 0, 8.5, 4, 0];
+calculatedData(arr);
 
 
 
